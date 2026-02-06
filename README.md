@@ -47,6 +47,12 @@
 
 ## 🏗 Architecture
 
+### Agent Graph Visualization
+
+<p align="center">
+  <img src="docs/images/agent_architecture.png" alt="TrendIT Agent Architecture" width="800" />
+</p>
+
 ### 🔄 Workflow Steps Explained
 
 | Step | Node | Description |
