@@ -47,44 +47,6 @@
 
 ## 🏗 Architecture
 
-### Agent Graph Visualization
-
-<p align="center">
-  <img src="docs/images/agent_architecture.png" alt="TrendIT Agent Architecture" width="800" />
-</p>
-
-### 📍 8-Step Workflow Pipeline
-
-```mermaid
-graph TD
-    A[__start__] --> B[intent_router]
-    
-    B -->|chat| C[chat]
-    B -->|guide| D[list_guide_videos]
-    B -->|feedback| E[feedback_type_router]
-    B -->|title| F[title_generator]
-    B -->|thumbnail| G[generate_thumbnail]
-    B -->|analyze| H[analyze_features]
-    
-    D --> I[select_reference]
-    I --> J[upload_video]
-    J --> H
-    
-    E -->|motion| K[motion_feedback]
-    E -->|title| F
-    
-    K --> L[follow_up_title]
-    L --> M[title_intent_router]
-    M -->|yes| N[title_answer]
-    
-    C --> O[__end__]
-    H --> O
-    F --> O
-    G --> O
-    N --> O
-    M -->|no| O
-```
-
 ### 🔄 Workflow Steps Explained
 
 | Step | Node | Description |
@@ -370,12 +332,6 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
